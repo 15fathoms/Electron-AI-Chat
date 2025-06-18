@@ -10,5 +10,8 @@
     "electron": "^36.4.0",
     "lowdb": "^7.0.1",
     "ollama": "^0.5.16"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12"
   }
 }
