@@ -1,0 +1,14 @@
+{
+  "name": "chat-electron-ollama",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^36.4.0",
+    "lowdb": "^7.0.1",
+    "ollama": "^0.5.16"
+  }
+}

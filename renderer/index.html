@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat Ollama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="messages">
+      <div class="conversation">
+        <div class="convo"></div>
+      </div>
+      <div class="prompt">
+        <div contenteditable="true" id="prompt"></div>
+        <div class="menu">
+          <div class="models">
+            <div class="text">Models</div>
+            <i class="icon o-chevron-down icon-16"></i>
+            <div class="models-list"></div>
+          </div>
+          <div class="new-conv">
+            <div class="add-convo">
+              <div class="text">New</div>
+              <i class="icon icon-16 o-chat-bubble-left-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-models-installed no-display">
+    <div class="content">
+      <h2>No models installed</h2>
+      <p>Install one via:</p>
+      <pre><code class="language-bash">ollama run qwen3:latest</code></pre>
+    </div>
+  </div>
+
+  <template class="answer">
+    <div class="ai-answer"></div>
+  </template>
+  <template class="demand">
+    <div class="user-demand"></div>
+  </template>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
