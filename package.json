@@ -4,14 +4,45 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": {
+    "name": "15Fathoms",
+    "email": "fathoms.contact@gmail.com"
   },
   "dependencies": {
-    "electron": "^36.4.0",
     "lowdb": "^7.0.1",
     "ollama": "^0.5.16"
   },
   "devDependencies": {
-    "electron-builder": "^26.0.12"
+    "electron-builder": "^26.0.12",
+    "electron": "^36.4.0"
+  },
+  "build": {
+    "appId": "com.electron.aichat",
+    "productName": "Electron AI Chat",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }
